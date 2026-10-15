@@ -1,0 +1,1 @@
+schema was the most useful because it shows how a table was built without needing the original code
