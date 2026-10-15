@@ -1,1 +1,2 @@
 schema was the most useful because it shows how a table was built without needing the original code
+Task 6: this dataset is only a few MB, read by one dashboard and one weekly report, so in the cloud it would cost ... and ... would pay for it.
