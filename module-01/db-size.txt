@@ -1,2 +1,3 @@
 telemetry.db size: 10.5 MB
 rows: 172800
+“In the cloud this would be a small database instance plus storage, costing a monthly fee that the shop (Wittkamp) would pay, while locally it is a 10.5 MB file that costs nothing extra.”
