@@ -1,0 +1,6 @@
+QUERY PLAN
+`--SCAN maint_job
+QUERY PLAN
+`--SCAN machine
+QUERY PLAN
+`--SCAN maint_job
