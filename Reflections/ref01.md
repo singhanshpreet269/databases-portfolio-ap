@@ -30,7 +30,7 @@ I asked an LLM for a query that returns the average spindle load per machine for
 **What it got wrong:** "overnight" crosses midnight, but the query only kept readings after 18:00, so it used 43,200 of the 86,400 overnight rows. The machine ranking changed because of this. The `LIKE` version was worse (18,102 rows), since it matched "18" in minutes and seconds too.
 **How I checked:** by comparing row counts and results in Python, not by trusting how correct the query looked.
 
-Details: [llm-sql-verification.md](../module-01/llm-sql-verification.md)
+Details: [llm-sql-verification.md](../Module01/llm-sql-verification.md)
 
 ## Help and extra work
 I helped other pod meme,bers set up GitHub and VS Code, including cloning their own repository from the template instead of the template itself. [Add who helped you and whether it was useful.]

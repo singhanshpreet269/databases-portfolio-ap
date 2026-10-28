@@ -1,4 +1,4 @@
-"""Load module-01/telemetry.csv into module-01/telemetry.db."""
+"""Load Module01/telemetry.csv into Module01/telemetry.db."""
 import csv, sqlite3
 from pathlib import Path
 

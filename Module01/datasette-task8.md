@@ -1,6 +1,6 @@
 # Task 8: Publish your data with Datasette
 
-I started Datasette with `uv run datasette module-01/telemetry.db -o` and explored the readings table (172,800 rows).
+I started Datasette with `uv run datasette Module01/telemetry.db -o` and explored the readings table (172,800 rows).
 
 ![Datasette table view](pictures/datasette-table.png)
 

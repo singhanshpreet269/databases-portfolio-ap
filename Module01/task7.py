@@ -1,6 +1,6 @@
 import sqlite3
 
-conn = sqlite3.connect("module-01/telemetry.db")
+conn = sqlite3.connect("Module01/telemetry.db")
 
 good = """
 SELECT machine, AVG(spindle_load) AS avg_spindle_load

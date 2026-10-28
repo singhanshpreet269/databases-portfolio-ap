@@ -8,7 +8,7 @@ My team for the final project: [add names and portfolio links once teams are for
 
 Our team final project repository is [here]([add link when it exists]).
 
-My personal profile and expectations are [here](module-01/README.md#task-personal-profile).
+My personal profile and expectations are [here](Module01/README.md#task-personal-profile).
 
 ## About this portfolio
 
@@ -18,7 +18,7 @@ Anyone should be able to rebuild my results from the scripts alone. That is why 
 
 ## Table of Contents
 
-- [Module 1: Introduction and Local-First Foundations](module-01/README.md), [Reflection 1](Reflections/ref01.md)
+- [Module 1: Introduction and Local-First Foundations](Module01/README.md), [Reflection 1](Reflections/ref01.md)
   - 172,800 simulated machine readings in one 10.5 MB SQLite file, queried from Python and the shell, plus a verified LLM-generated query.
 - [Module 2: Data Contracts and Legacy Schemas](Module02/README.md), [Reflection 2](Reflections/ref02.md)
   - Audit of a flawed maintenance database: five integrity defects proved with queries, and the corrected schema as a Pydantic and SQLAlchemy contract.
@@ -40,9 +40,9 @@ git clone https://github.com/[your-username]/databases-portfolio.git
 cd databases-portfolio
 uv sync                                          # installs the pinned Python and libraries
 uv run uv-check.py                               # checks the environment
-uv run python module-01/generate_telemetry.py    # creates the simulated data (CSV)
-uv run python module-01/load_telemetry.py        # loads the CSV into SQLite
-uv run python module-01/run_queries.py           # runs the queries
+uv run python Module01/generate_telemetry.py    # creates the simulated data (CSV)
+uv run python Module01/load_telemetry.py        # loads the CSV into SQLite
+uv run python Module01/run_queries.py           # runs the queries
 ```
 
 `uv run` always uses the Python version pinned in `.python-version` and the library versions locked in `uv.lock`, so the results are the same on every machine.

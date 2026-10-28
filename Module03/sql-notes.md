@@ -26,3 +26,20 @@ When we type commands in sqlite3, enter them one at a time and press Enter after
 | + `ordered_on` | 163.3 | 0.34 | 13.2 | 8.0 |
 | + `orderline_order` | 1624.0 | 0.21 | 14.0 | 7.9 |
 | + `orderline_product` | 1785.9 | 0.29 | 0.094 | 9.1 |
+## Task 5 (stretcher): Late orders per customer
+
+I rewrote the GROUP BY report as a correlated subquery and as a window function (`COUNT(*) OVER (PARTITION BY customer_id)`). `task5_bench.py` runs all three (median of 3 runs, SQLite 3.53.4); all three return identical rows (400 customers).
+
+| Version | No extra index | With `orders(customer_id, status)` |
+|---|---|---|
+| GROUP BY | 9.6 ms | 7.5 ms |
+| Correlated subquery | 1248.1 ms | 1.6 ms |
+| Window function | 20.0 ms | 18.3 ms |
+
+- **Correlated subquery, no index:** the select-list subquery shows `SCAN o` under `CORRELATED SCALAR SUBQUERY 1`, so `orders` is rescanned for each customer. It is about 130× slower than GROUP BY. SQLite built a temporary `AUTOMATIC PARTIAL COVERING INDEX` for the `EXISTS` part, but not for the scalar subquery.
+- **With `ix_orders_cust_status`:** both subquery lookups become `SEARCH o USING COVERING INDEX (customer_id=? AND status=?)`, and the time drops to 1.6 ms. It becomes the fastest version, about 780× faster than before.
+- **GROUP BY and window:** the index changes their plans to a covering scan, but the timing differences (9.6 to 7.5 ms, 20.0 to 18.3 ms) are within noise. These versions read all late orders either way.
+- **Window function:** it produces one row per late order, so it needs `DISTINCT` to collapse the rows back to one per customer. It is no faster than GROUP BY and is harder to read for this report.
+- **Readability:** GROUP BY is the clearest here. A window function pays off when each row needs its own detail next to the aggregate, for example every late order together with that customer's total.
+- **What the LLM produced by default:** [fill in after asking it]
+- **Takeaway:** the three queries mean the same thing, but only the plan shows that one of them is about 130× slower. The right index fixed the slow version without changing the SQL, and it did not change the other two in any way I can measure.
