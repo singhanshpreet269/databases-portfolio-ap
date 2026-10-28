@@ -1,1 +1,2 @@
-# Pictures for Module 1
+er-diagram.png
+which i did during the semianr
