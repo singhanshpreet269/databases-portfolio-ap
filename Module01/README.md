@@ -28,8 +28,8 @@ Proves: [LG1](#lg1)
 
 I am an undergraduate student at HSBI.
 
-- **Programming experience:**   I have learned c++ ,  python 
-- **Creative qualities:**  very socialable , love to connect with people
+- **Programming experience:** I have learned C++ and Python.
+- **Creative qualities:** Very sociable, and I love to connect with people.
 - **Expectations:** I want to understand how databases are structured, learn SQL, and learn how to create and manage databases locally, with reliable, offline-capable data storage.
 
 ## Task What is IoT
@@ -79,11 +79,6 @@ IoT means physical devices with sensors that collect data and exchange it over a
 **Shell and tools**
 - Shell tour: [shell-tour.txt](shell-tour.txt) and [tour.sql](tour.sql)
 - Most useful dot-command: `.schema`, because it shows how a table was built without needing the original code.
-
-**SQL Island**
-- Answers: [sql-island.md](sql-island.md)
-
-![SQL Island progress](pictures/sql-island-progress.png)
 
 ## What I learned
 
