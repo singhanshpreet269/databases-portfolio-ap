@@ -10,11 +10,10 @@ Don't trust a schema just because it works. Prove its cardinalities and defects 
 - **Explaining it to others.** Helping a pod mate understand the diagram forced me to say it simply: an entity is a "thing", a relationship links things, and cardinality tells you how many on each side. That made me understand it better myself.
 
 ## What was difficult?
-Understanding why the parts list had to become a junction table (`job_part`). The root cause was that I first treated the text column `parts_used` as one value instead of a hidden list of parts, which is a many-to-many relationship. [Add one more thing if you had it, for example deciding whether the technician is an entity or just a name.]
+Understanding why the parts list had to become a junction table (`job_part`). The root cause was that I first treated the text column `parts_used` as one value instead of a hidden list of parts, which is a many-to-many relationship.
 
 ## Exploration and show stoppers
-I experimented with the ER diagram in [tool, e.g. Mermaid or diagrams.net] and checked whether the diagram really matched the data, using `COUNT` queries. [Add one thing that got stuck and who you asked, or write "nothing blocked me".]
-
+I experimented with the ER diagram in [tool, e.g. Mermaid or diagrams.net] and checked whether the diagram really matched the data, using `COUNT` queries. 
 ## Interaction with peers and instructors
 I worked on the study tasks with my pod (Smit and Champu). For the exchange in Task C we explained our study logs to a neighbouring pod (Ian, Leviscus, Njeru and Sofia), agreed on the most important points, and shared one image in Discord. [Add one sentence on what they asked or what you learned from them.]
 
