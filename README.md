@@ -1,8 +1,11 @@
-# Personal Portfolio for the Databases class at HSBI
+# # Personal Portfolio for the Databases class at HSBI
 
 Author: Anshpreet Singh, B.Eng. Industrial Engineering, Hochschule Bielefeld (HSBI)
 
-My pod: [Sam Beza](https://github.com/[username]/[repo]), [Smit](https://github.com/[username]/[repo]) and [Champu](https://github.com/[username]/[repo]).
+My pod:
+- [Samuel Beza](https://github.com/beza-brandt/Sem3-Database-Portfolio)
+- [Smit Pareshbhai Vekariya](https://github.com/[username]/[repo])
+- [Chengpu Li](https://github.com/chengpuli-sketch/databases-portfolio)
 
 My team for the final project: [add names and portfolio links once teams are formed].
 
@@ -38,8 +41,8 @@ You need [uv](https://docs.astral.sh/uv/) and Git. Run these at the repo root:
 ```bash
 git clone https://github.com/[your-username]/databases-portfolio.git
 cd databases-portfolio
-uv sync                                          # installs the pinned Python and libraries
-uv run uv-check.py                               # checks the environment
+uv sync                                         # installs the pinned Python and libraries
+uv run uv-check.py                              # checks the environment
 uv run python Module01/generate_telemetry.py    # creates the simulated data (CSV)
 uv run python Module01/load_telemetry.py        # loads the CSV into SQLite
 uv run python Module01/run_queries.py           # runs the queries
@@ -60,4 +63,3 @@ uv run python Module01/run_queries.py           # runs the queries
 ## Miscellaneous
 
 - [Hardware in my/our possession](Hardware/README.md)
-
