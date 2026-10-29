@@ -33,24 +33,22 @@ Done with my pod ([Smit](https://github.com/[username]/[repo]), [Champu](https:/
 
 ### 4. LLM Q&A
 
-✏️ Replace these two rows with the prompts you really tried. Keep the "how I verified it" column, because that is the part the task grades.
-
 | Prompt | Summary of the answer | How I verified it (and where it was wrong) |
 |---|---|---|
-| "Here is a legacy schema: [CREATE TABLEs]. What entities, attributes and relationships does it intend?" | It suggested Machine, Part, MaintenanceJob and Technician, with a many-to-many between jobs and parts | I proved the cardinalities with `COUNT` queries on `legacy.db`. [Add where it was wrong or vague.] |
-| "A column holds `parts_used = 'P-1001,P-1002'`. Why does that violate 1NF?" | The column stores a list, so it needs a junction table | I rebuilt it as `job_part` in `contract.py` and checked that job 1 now has two rows. [Add anything it missed.] |
+| [paste the prompt you really used] | [2 to 3 lines] | [how you checked it, and where it was wrong or vague] |
+| [paste a second prompt] | [2 to 3 lines] | [how you checked it, and where it was wrong or vague] |
 
 ### 5. My two best found ER sketches
 
-✏️ Pick two diagrams you really found, and fill in the source and your redraw.
+Both are in [er-sketches.md](er-sketches.md). They were generated with an LLM, and I checked them myself.
 
-**Sketch 1:** [source link or credit]
-- My redraw (Mermaid): [paste]
-- What I learned from it that the others did not show: [one sentence]
+**[Sketch 1: University registration](er-sketches.md#sketch-1-university-registration)**
+- Source: LLM-generated, redrawn in Mermaid.
+- What I learned from it: `ENROLLMENT` is a junction table between students and course offerings, and it also carries its own attribute (`grade`). [Edit if you learned something different.]
 
-**Sketch 2:** [source link or credit]
-- My redraw (Mermaid): [paste]
-- What I learned from it that the others did not show: [one sentence]
+**[Sketch 2: Machine maintenance](er-sketches.md#sketch-2-machine-maintenance)**
+- Source: LLM-generated, redrawn in Mermaid.
+- What I learned from it: a breakdown report leads to work orders, and a machine keeps its history in a separate table instead of in columns. [Edit if you learned something different.]
 
 ## Task B: From words to sketch
 
@@ -167,4 +165,4 @@ We explained our study logs and sketches to each other and asked questions.
 - A natural key without `UNIQUE` is not a key.
 - Many-to-many relationships need a junction table, and a list in a column hides one.
 - Prove cardinalities with `COUNT` queries, not by looking at the drawing.
-- 
+-
